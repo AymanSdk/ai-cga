@@ -273,7 +273,7 @@ export default [
   {
     name: "Explain Code",
     desc: "AI Model to explain programming code in any language",
-    icon: "https://cdn-icons-png.flaticon.com/128/8488/8488751.png",
+    icon: "/coding.png",
     category: "Coding",
 
     slug: "explain-code",
