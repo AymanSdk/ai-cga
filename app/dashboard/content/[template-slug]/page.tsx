@@ -1,6 +1,8 @@
 import React from "react";
 import FormSection from "../_components/FormSection";
 import OutputSection from "../_components/OutputSection";
+import Templates from "@/app/(data)/Templates";
+import { TEMPLATE } from "../../_components/TemplateListSection";
 
 interface PROPS {
   params: {
@@ -9,10 +11,14 @@ interface PROPS {
 }
 
 function CreateNewContent(props: PROPS) {
+  const seletedTemplate: TEMPLATE | undefined = Templates?.find(
+    (item) => item.slug == props.params["template-slug"]
+  );
+
   return (
-    <div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-5">
       {/* Form Section  */}
-      <FormSection />
+      <FormSection selectedTemplate={seletedTemplate} />
       {/* Output setion */}
       <OutputSection />
     </div>
