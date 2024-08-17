@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
+import React, { useState } from "react";
 import { TEMPLATE } from "../../_components/TemplateListSection";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -9,13 +9,19 @@ import { Button } from "@/components/ui/button";
 
 interface PROPS {
   selectedTemplate?: TEMPLATE;
+  userFormInput: any;
 }
 
-function FormSection({ selectedTemplate }: PROPS) {
-  const handleInputChange = (event: any) => {};
+function FormSection({ selectedTemplate, userFormInput }: PROPS) {
+  const [formData, setFormData] = useState<any>();
+  const handleInputChange = (event: any) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const onSubmit = (e: any) => {
     e.preventDefault();
+    userFormInput(formData);
   };
 
   return (
