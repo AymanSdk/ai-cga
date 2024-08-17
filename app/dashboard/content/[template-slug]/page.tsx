@@ -16,11 +16,13 @@ function CreateNewContent(props: PROPS) {
   );
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-5">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-5">
       {/* Form Section  */}
       <FormSection selectedTemplate={seletedTemplate} />
       {/* Output setion */}
-      <OutputSection />
+      <div className="col-span-2">
+        <OutputSection />
+      </div>
     </div>
   );
 }

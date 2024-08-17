@@ -12,6 +12,8 @@ interface PROPS {
 }
 
 function FormSection({ selectedTemplate }: PROPS) {
+  const handleInputChange = (event: any) => {};
+
   const onSubmit = (e: any) => {
     e.preventDefault();
   };
@@ -30,9 +32,17 @@ function FormSection({ selectedTemplate }: PROPS) {
           <div className="my-2 flex flex-col gap-2 mb-7">
             <label className="font-bold">{item.label}</label>
             {item.field == "input" ? (
-              <Input />
+              <Input
+                name={item.name}
+                required={item?.required}
+                onChange={handleInputChange}
+              />
             ) : item.field == "textarea" ? (
-              <Textarea />
+              <Textarea
+                name={item.name}
+                required={item?.required}
+                onChange={handleInputChange}
+              />
             ) : null}
           </div>
         ))}
