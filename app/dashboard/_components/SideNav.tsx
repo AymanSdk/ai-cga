@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import UsageTrack from "./UsageTrack";
+// import UsageTrack from "./UsageTrack";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -59,7 +59,7 @@ function SideNav() {
         ))}
       </div>
       <div className="absolute bottom-10 left-0 w-full">
-        <UsageTrack />
+        {/* <UsageTrack /> */}
       </div>
     </div>
   );
