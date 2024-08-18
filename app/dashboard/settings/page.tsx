@@ -3,7 +3,7 @@ import React from "react";
 
 function Settings() {
   return (
-    <div className="flex items-center justify-center h-full p-10">
+    <div className="flex items-center justify-center h-full p-10 my-10">
       <UserProfile />
     </div>
   );

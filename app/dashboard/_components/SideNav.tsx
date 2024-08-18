@@ -19,11 +19,11 @@ function SideNav() {
       icon: FileClock,
       path: "/dashboard/history",
     },
-    {
-      name: "Billing",
-      icon: WalletCards,
-      path: "/dashboard/billing",
-    },
+    // {
+    //   name: "Billing",
+    //   icon: WalletCards,
+    //   path: "/dashboard/billing",
+    // },
     {
       name: "Settings",
       icon: Settings,
