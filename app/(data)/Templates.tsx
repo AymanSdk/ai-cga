@@ -1,5 +1,23 @@
 export default [
   {
+    name: "Explain Code",
+    desc: "AI Model to explain programming code in any language",
+    icon: "/coding.png",
+    category: "Coding",
+
+    slug: "explain-code",
+    aiPrompt:
+      "Depends on user codeDescription explain code line by line and give output in  in rich text editor format in code block ",
+    form: [
+      {
+        label: "Enter code which you want to understand",
+        field: "textarea",
+        name: "codeDesscripton",
+        required: true,
+      },
+    ],
+  },
+  {
     name: "blog title",
     desc: "an AI powered blog generator that generates blog titles based on the content of the blog",
     category: "Blog",
@@ -21,6 +39,7 @@ export default [
       },
     ],
   },
+
   {
     name: "Blog Content",
     desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
@@ -164,23 +183,6 @@ export default [
     ],
   },
   {
-    name: "Add Emojis to Text",
-    desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
-    icon: "https://cdn-icons-png.flaticon.com/128/2584/2584606.png",
-    category: "blog",
-    slug: "add-emoji-to-text",
-    aiPrompt:
-      "Add Emoji to outline text depends on outline and rewrite it in rich text editor format",
-    form: [
-      {
-        label: "Enter your text to add emojis",
-        field: "textarea",
-        name: "outline",
-        required: true,
-      },
-    ],
-  },
-  {
     name: "Instagram Post Generator",
     desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
     icon: "https://cdn-icons-png.flaticon.com/128/15713/15713420.png",
@@ -217,24 +219,6 @@ export default [
     ],
   },
   {
-    name: "Instagram Post/Reel Idea",
-    desc: "An AI tool that generate New and trending instagram idea depends on your niche",
-    icon: "https://cdn-icons-png.flaticon.com/128/1029/1029183.png",
-    category: "instagram",
-
-    slug: "instagram-post-idea-generator",
-    aiPrompt:
-      "Generate 5-10 Instagram idea depends on niche with latest trend and give output in  in rich text editor format",
-    form: [
-      {
-        label: "Enter Keywords / Niche for your instagram idea",
-        field: "input",
-        name: "keywords",
-        required: true,
-      },
-    ],
-  },
-  {
     name: "English Grammer Check",
     desc: "AI Model to Correct your english grammer by providing the text",
     icon: "https://cdn-icons-png.flaticon.com/128/12596/12596700.png",
@@ -264,24 +248,6 @@ export default [
     form: [
       {
         label: "Enter description of code you want along with Programming Lang",
-        field: "textarea",
-        name: "codeDesscripton",
-        required: true,
-      },
-    ],
-  },
-  {
-    name: "Explain Code",
-    desc: "AI Model to explain programming code in any language",
-    icon: "/coding.png",
-    category: "Coding",
-
-    slug: "explain-code",
-    aiPrompt:
-      "Depends on user codeDescription explain code line by line and give output in  in rich text editor format in code block ",
-    form: [
-      {
-        label: "Enter code which you want to understand",
         field: "textarea",
         name: "codeDesscripton",
         required: true,
